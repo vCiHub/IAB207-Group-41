@@ -37,9 +37,10 @@
             background-color: #fff;
             padding: 20px;
             text-align: center;
-            height: 150px;
+            height: auto;
             color: #333;
             border-radius: 10px;
+            margin-bottom: 15px;
         }
 
         .game-status {
@@ -105,17 +106,18 @@
             overflow-y: auto;
         }
 
-        /* Hide the extra games initially */
+        details summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #007bff;
+        }
+
         details summary::marker {
-            display: none; /* Hide the default marker for summary */
+            display: none;
         }
 
-        details[open] summary::after {
-            content: "Hide Extra Games";
-        }
-
-        details summary::after {
-            content: "Show All Games";
+        .hidden-games {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -144,7 +146,7 @@
             </div>
         </div>
     </nav>
-    
+
     <!-- Hero Section (Jumbotron-like) -->
     <div class="hero-section">
         <div class="container text-center">
@@ -167,42 +169,76 @@
         <div class="container mt-5">
             <h5>Upcoming Games</h5>
             <div class="row">
+                <!-- Only show Raiders vs Patriots initially -->
                 <div class="col-md-3">
                     <div class="game-card">
                         <h6>Raiders vs Patriots</h6>
                         <p>12 Oct 2024 7.00pm Gillette Stadium</p>
                         <a href="EventDetails.html" class="badge bg-success game-status">Open</a>
+                        <details>
+                            <summary></summary>
+                            <div>
+                                <p><strong>Ticket Sales:</strong> 80% sold</p>
+                                <p><strong>Rating:</strong> 4.5/5</p>
+                            </div>
+                        </details>
                     </div>
                 </div>
+            </div>
 
-                <!-- Use details/summary to reveal more games -->
-                <details>
-                    <summary></summary>
-                    <div class="row mt-3">
-                        <div class="col-md-3">
-                            <div class="game-card">
-                                <h6>Lakers vs Warriors</h6>
-                                <p>12 Oct 2024 7.40pm Crypto Arena</p>
-                                <span class="badge bg-danger game-status">Sold Out</span>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="game-card">
-                                <h6>Thunder vs Clippers</h6>
-                                <p>13 Oct 2024 8.00pm Crypto Arena</p>
-                                <span class="badge bg-warning game-status">Cancelled</span>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="game-card">
-                                <h6>Bulls vs Celtics</h6>
-                                <p>13 Oct 2024 7.40pm TD Garden</p>
-                                <span class="badge bg-secondary game-status">Inactive</span>
-                            </div>
+            <!-- Hidden Game Cards Section -->
+            <details class="hidden-games">
+                <summary>Show All Games</summary>
+                <div class="row mt-3">
+                    <!-- Game Card 2 -->
+                    <div class="col-md-3">
+                        <div class="game-card">
+                            <h6>Lakers vs Warriors</h6>
+                            <p>12 Oct 2024 7.40pm Crypto Arena</p>
+                            <span class="badge bg-danger game-status">Sold Out</span>
+                            <details>
+                                <summary></summary>
+                                <div>
+                                    <p><strong>Ticket Sales:</strong> 100% sold</p>
+                                    <p><strong>Rating:</strong> 4.7/5</p>
+                                </div>
+                            </details>
                         </div>
                     </div>
-                </details>
-            </div>
+
+                    <!-- Game Card 3 -->
+                    <div class="col-md-3">
+                        <div class="game-card">
+                            <h6>Thunder vs Clippers</h6>
+                            <p>13 Oct 2024 8.00pm Crypto Arena</p>
+                            <span class="badge bg-warning game-status">Cancelled</span>
+                            <details>
+                                <summary></summary>
+                                <div>
+                                    <p><strong>Ticket Sales:</strong> N/A</p>
+                                    <p><strong>Rating:</strong> N/A</p>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- Game Card 4 -->
+                    <div class="col-md-3">
+                        <div class="game-card">
+                            <h6>Bulls vs Celtics</h6>
+                            <p>13 Oct 2024 7.40pm TD Garden</p>
+                            <span class="badge bg-secondary game-status">Inactive</span>
+                            <details>
+                                <summary></summary>
+                                <div>
+                                    <p><strong>Ticket Sales:</strong> 50% sold</p>
+                                    <p><strong>Rating:</strong> 3.8/5</p>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </details>
         </div>
 
         <!-- Two Large Images with Text Overlay -->
@@ -215,7 +251,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="image-card">
-                        <img src="https://static.www.nfl.com/image/upload/f_auto/league/rlepovgsdqujkdx2rhym" alt="Image 2">
+                        <img src="https://espnpressroom.com/us/files/2023/05/IMG_1114.jpg" alt="Image 2">
                     </div>
                 </div>
             </div>
