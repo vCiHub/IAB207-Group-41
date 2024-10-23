@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #333;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background-color: #000;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+        }
+
+        .nav-item:hover {
+            background-color: #444;
+        }
+
+        .content {
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: black;
+            border-radius: 10px;
+        }
+
+        .seat-map {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .footer {
+            background-color: #000;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* Styling for the book button */
+        .book-btn {
+            background-color: #000;
+            color: white;
+            border-radius: 25px;
+            padding: 10px 20px;
+            text-align: center;
+            display: inline-block;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .book-btn:hover {
+            background-color: #444;
+            color: #fff;
+        }
+
+        /* Make time and venue larger and position underneath the title */
+        .event-details {
+            margin-top: 10px;
+        }
+
+        .event-details h6 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* No. of tickets available box styling */
+        .tickets-available {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Reviews section styling */
+        .reviews-section {
+            margin-top: 30px;
+        }
+
+        .reviews-section h5 {
+            margin-bottom: 20px;
+        }
+
+        .review {
+            background-color: #444;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .review p {
+            margin: 0;
+        }
+
+        .review .reviewer {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* Comments section */
+        .comments-section {
+            margin-top: 30px;
+        }
+
+        .comments-section textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .comments-section button {
+            background-color: #000;
+            color: white;
+            border-radius: 25px;
+            padding: 10px 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .comments-section button:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><span style="color: #F56A6A; font-weight: bold;">realTickets</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Featured</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">NBA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">NFL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logged in: User162</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Event Details Content -->
+    <div class="container content">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Raiders vs Patriots</h4>
+                <div class="event-details">
+                    <h6>Time: 7:30pm</h6>
+                    <h6>Venue: Gillette Stadium</h6>
+                </div>
+                <div class="tickets-available">
+                    No. of tickets available: <span>566</span>
+                </div>
+                <h6>235 Listings</h6>
+                <h6>Sort by price</h6>
+                <div class="card">
+                    <p>Section: B <br> Seat 54</p>
+                    <a href="#" class="book-btn">Book</a>
+                </div>
+                <div class="card">
+                    <p>Section: Lower C <br> Seat 4</p>
+                    <a href="#" class="book-btn">Book</a>
+                </div>
+                <div class="card">
+                    <p>Section: Lower C <br> Seat 6</p>
+                    <a href="#" class="book-btn">Book</a>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <img src="https://www.rateyourseats.com/assets/images/seating_charts/static/new-england-patriots-seating-chart-with-rows-at-gillette-stadium.jpg" class="seat-map">
+            </div>
+        </div>
+
+        <!-- Reviews Section -->
+        <div class="reviews-section">
+            <h5>Reviews</h5>
+
+            <!-- Review 1 -->
+            <div class="review">
+                <div class="reviewer">John Doe</div>
+                <p>Loved the atmosphere at Gillette Stadium! Booking process was easy and seats were great.</p>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review">
+                <div class="reviewer">Jane Smith</div>
+                <p>Had an amazing time watching the Raiders! The venue seating chart helped me choose the best seats.</p>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="review">
+                <div class="reviewer">Mike Wilson</div>
+                <p>Great game, but tickets sold out quickly. Fortunately, I managed to grab one last minute.</p>
+            </div>
+        </div>
+
+        <!-- Comments Section -->
+        <div class="comments-section">
+            <h5>Leave a Comment</h5>
+            <textarea placeholder="Write your comment here..."></textarea>
+            <button type="submit">Submit Comment</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>All rights reserved Cirel Sanchez 2024</p>
+    </footer>
+
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
