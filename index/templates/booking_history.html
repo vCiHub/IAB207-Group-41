@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Booking History - RealTickets</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Full page styling */
+        body {
+            background-color: #333;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background-color: #000;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+        }
+
+        .nav-item:hover {
+            background-color: #444;
+        }
+
+        .content-container {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .booking-card {
+            background-color: #444;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .booking-card img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .booking-details {
+            flex-grow: 1;
+        }
+
+        .booking-details h5 {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .booking-details p {
+            margin: 5px 0;
+        }
+
+        .check-details-btn {
+            background-color: #000;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .check-details-btn:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: auto;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><span style="color: #F56A6A; font-weight: bold;">realTickets</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Featured</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">NBA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">NFL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Log in/Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container content-container">
+        <h2 class="text-center">My Booking History</h2>
+
+        <!-- Booking 1 -->
+        <div class="booking-card">
+            <img src="https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/raiders/iylkvetidit7mr5sks5o" alt="Event Image">
+            <div class="booking-details">
+                <h5>Raiders vs Patriots</h5>
+                <p><strong>Booking ID:</strong> 12345ABC</p>
+                <p><strong>Date Booked:</strong> 12 Oct 2024 6:00pm</p>
+            </div>
+            <a href="#" class="check-details-btn">Check Details</a>
+        </div>
+
+        <!-- Booking 2 -->
+        <div class="booking-card">
+            <img src="https://library.sportingnews.com/styles/crop_style_16_9_desktop/s3/2024-01/Lakers%20vs%20Warriors.jpeg?h=920929c4&itok=VSL-5HMs" alt="Event Image">
+            <div class="booking-details">
+                <h5>Lakers vs Warriors</h5>
+                <p><strong>Booking ID:</strong> 98765XYZ</p>
+                <p><strong>Date Booked:</strong> 10 Oct 2024 8:00pm</p>
+            </div>
+            <a href="#" class="check-details-btn">Check Details</a>
+        </div>
+
+        <!-- Booking 3 -->
+        <div class="booking-card">
+            <img src="https://hoopshype.com/wp-content/uploads/sites/92/2021/12/i_9a_1b_8a_OKC_vs_LAC.png?w=1000&h=600&crop=1" alt="Event Image">
+            <div class="booking-details">
+                <h5>Thunder vs Clippers</h5>
+                <p><strong>Booking ID:</strong> 45678LMN</p>
+                <p><strong>Date Booked:</strong> 14 Oct 2024 7:30pm</p>
+            </div>
+            <a href="#" class="check-details-btn">Check Details</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>All rights reserved Cirel Sanchez 2024</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
