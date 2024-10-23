@@ -138,6 +138,16 @@
         .comments-section button:hover {
             background-color: #444;
         }
+
+        /* Add some space under the filter */
+        .filter-section {
+            margin-bottom: 20px;
+        }
+
+        /* Quantity input styling */
+        .quantity-input {
+            margin-top: 10px;
+        }
     </style>
 </head>
 
@@ -145,27 +155,21 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><span style="color: #F56A6A; font-weight: bold;">realTickets</span></a>
+            <!-- Link to homepage when clicking "realTickets" -->
+            <a class="navbar-brand" href="homepage.html"><span style="color: #F56A6A; font-weight: bold;">realTickets</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
+                    <!-- Link to homepage when clicking "Home" -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="homepage.html">Home</a>
                     </li>
+                    <!-- Removed NBA, NFL, and Events from the navbar -->
                     <li class="nav-item">
                         <a class="nav-link" href="#">Featured</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">NBA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">NFL</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Logged in: User162</a>
@@ -185,25 +189,46 @@
                     <h6>Venue: Gillette Stadium</h6>
                 </div>
                 <div class="tickets-available">
-                    No. of tickets available: <span>566</span>
+                    No. of tickets available: <span>104</span>
                 </div>
-                <h6>235 Listings</h6>
-                <h6>Sort by price</h6>
+
+                <!-- Sorting Options -->
+                <div class="filter-section">
+                    <h6>Sort by price</h6>
+                    <form action="sort_tickets.php" method="GET">
+                        <select name="sort" class="form-select" onchange="this.form.submit()">
+                            <option value="asc">Price: Low to High</option>
+                            <option value="desc">Price: High to Low</option>
+                        </select>
+                    </form>
+                </div>
+
+                <!-- Tickets Sorted by Price -->
+                <!-- Ticket cards with quantity option -->
                 <div class="card">
-                    <p>Section: B <br> Seat 54</p>
+                    <p>Section: Lower C <br> Seat 6 <br> Price: $150</p>
+                    <div class="quantity-input">
+                        Quantity: <input type="number" min="1" max="10" value="1" class="form-control d-inline w-auto">
+                    </div>
                     <a href="#" class="book-btn">Book</a>
                 </div>
                 <div class="card">
-                    <p>Section: Lower C <br> Seat 4</p>
+                    <p>Section: Lower C <br> Seat 4 <br> Price: $200</p>
+                    <div class="quantity-input">
+                        Quantity: <input type="number" min="1" max="10" value="1" class="form-control d-inline w-auto">
+                    </div>
                     <a href="#" class="book-btn">Book</a>
                 </div>
                 <div class="card">
-                    <p>Section: Lower C <br> Seat 6</p>
+                    <p>Section: B <br> Seat 54 <br> Price: $250</p>
+                    <div class="quantity-input">
+                        Quantity: <input type="number" min="1" max="10" value="1" class="form-control d-inline w-auto">
+                    </div>
                     <a href="#" class="book-btn">Book</a>
                 </div>
             </div>
             <div class="col-md-8">
-                <img src="https://www.rateyourseats.com/assets/images/seating_charts/static/new-england-patriots-seating-chart-with-rows-at-gillette-stadium.jpg" class="seat-map">
+                <img src="https://blog.ticketiq.com/hubfs/GilletteStadium_Football.gif" class="seat-map">
             </div>
         </div>
 
@@ -243,7 +268,6 @@
         <p>All rights reserved Cirel Sanchez 2024</p>
     </footer>
 
-    
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
