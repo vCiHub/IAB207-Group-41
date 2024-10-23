@@ -50,3 +50,10 @@ def create_event():
 
     return render_template('create_event.html')
 
+@app.route('/events')
+def show_events():
+    # Fetch events from the database (placeholder for now Fatima add)
+    events = [
+        {"home_team": "Team A", "away_team": "Team B", "venue": "Madison Square Garden", "date": "2024-10-22", "seats": 100}
+    ]
+    return render_template('events.html', events=events)
